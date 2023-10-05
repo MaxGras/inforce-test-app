@@ -1,0 +1,30 @@
+footer {
+  height: 100px;
+  border: 1px solid rgba($color: #69706d, $alpha: 0.1);
+  background-color: rgba(54, 132, 248, 0.7);
+  display: flex;
+  align-items: center;
+ flex-direction:  column;
+ justify-content: center;
+padding-block: 0.5rem;
+
+  section {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    a {
+      margin: 0.5rem;
+
+      &:hover {
+        text-shadow: 1px 1px 1px rgba($color: #000, $alpha: 0.3);
+      }
+    }
+  }
+
+  p {
+    margin: 0.5rem;
+    font-weight: 500;
+    color: #FFF;
+ 
+  }
+}

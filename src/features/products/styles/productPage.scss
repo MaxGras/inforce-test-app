@@ -1,0 +1,91 @@
+@media screen and (max-width: 769px) {
+  .productPage__main {
+    margin-bottom: 2rem;
+    flex-direction: column;
+  }
+}
+
+%controlsStyle {
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #72a9fa;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.productPage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__main {
+    display: flex;
+    justify-content: flex-start;
+    padding-inline: 10%;
+    gap: 10%;
+    &__about {
+      background-color: #a9cbec;
+      max-width: 30%;
+      border-radius: 10px;
+      padding: 1% 1%;
+    }
+    button {
+      @extend %controlsStyle;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        transform: translateY(1px);
+      }
+
+      &:nth-child(1) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &__comments {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+  
+    &__newComment {
+      display: flex;
+      flex-direction: column;
+
+      textarea {
+        @extend %controlsStyle;
+        width: 400px;
+        min-height: 70px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background-color: #a9cbec;
+        color: #000;
+        &:focus {
+          outline: none;
+          box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 0 2px #007bff;
+        }
+      }
+    }
+
+    button {
+      @extend %controlsStyle;
+      width: 70px;
+      align-self: flex-end;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+  }
+}
